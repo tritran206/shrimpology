@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddAquarium">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:inputType="text"
+        android:hint="Aquarium Name" />
+
+    <EditText
+        android:id="@+id/volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:inputType="number"
+        android:hint="Volume" />
+
+    <EditText
+        android:id="@+id/lighting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:inputType="text"
+        android:hint="Lighting" />
+
+    <EditText
+        android:id="@+id/filtration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:hint="Filtration" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CO2"
+            android:layout_marginLeft="16dp"/>
+        <RadioGroup
+            android:id="@+id/co2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/input_margin">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noco2"
+                android:text="No" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yesco2"
+                android:text="Yes" />
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+    <!--<EditText-->
+    <!--&lt;!&ndash;android:id="@+id/co2"&ndash;&gt;-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="8dp"-->
+    <!--android:hint="CO2"/>-->
+
+    <EditText
+        android:id="@+id/substrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:hint="Substrate" />
+
+    <EditText
+        android:id="@+id/inhabitants"
+        android:hint="Type of Shrimp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/input_margin"
+        android:layout_gravity="left"
+        android:onClick="saveAquarium"
+        android:text="Save" />
+
+</LinearLayout>

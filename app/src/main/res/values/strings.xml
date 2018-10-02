@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Shrimpology</string>
+    <string name="title_activity_aquarium_home">AquariumHome</string>
+    <string name="aquariums">Aquariums</string>
+    <string name="shrimps">Shrimps</string>
+    <string name="neocaridina">Neocaridina</string>
+    <string name="caridina">Caridina</string>
+    <string name="neocaridina_shrimp">Neocaridina Shrimp</string>
+    <string name="caridina_shrimp">Caridina Shrimp</string>
 </resources>

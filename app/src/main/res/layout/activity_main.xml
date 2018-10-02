@@ -7,30 +7,41 @@
     tools:context=".MainActivity"
     android:background="@drawable/crs_colony">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="50sp"
+        android:textColor="#ffff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_marginBottom="200dp">
+        android:layout_marginBottom="200dp"
+        android:gravity="center">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/aquariumsButton"
-            android:text="Aquariums"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="openAquariums"/>
+            android:layout_weight="1"
+            android:onClick="openAquariums"
+            android:text="@string/aquariums"
+            android:theme="@style/MyButton"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/shrimpsButton"
-            android:text="Shrimps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:onClick="openShrimps"/>
-
+            android:layout_weight="1"
+            android:onClick="openShrimps"
+            android:text="@string/shrimps"
+            android:theme="@style/MyButton"/>
 
 
     </LinearLayout>
