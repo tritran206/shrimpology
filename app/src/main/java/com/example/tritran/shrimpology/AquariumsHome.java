@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
-        import android.view.View;
+import android.util.Log;
+import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.LinearLayout;
@@ -17,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 public class AquariumsHome extends AppCompatActivity {
 
     public static final int INPUT_REQUEST = 3;
+    private static final String TAG = AquariumsHome.class.getSimpleName();
 
     Button save;
     ArrayList<Aquarium> lstAquariums = new ArrayList<>();
@@ -45,7 +47,27 @@ public class AquariumsHome extends AppCompatActivity {
         inhabitants = findViewById(R.id.tv_inhabitants);
         content = findViewById(R.id.content);
 
+        if (savedInstanceState != null) {
+            boolean isVisible = savedInstanceState.getBoolean("content_visible");
+
+
+            if(isVisible) {
+                Log.d(TAG, "onCreate: retrieving savedinstance state");
+                content.setVisibility(View.VISIBLE);
+                name.setText(savedInstanceState.getString("name"));
+                volume.setText(savedInstanceState.getString("volume"));
+                lighting.setText(savedInstanceState.getString("lighting"));
+                filtration.setText(savedInstanceState.getString("filtration"));
+                co2.setText(savedInstanceState.getString("co2"));
+                substrate.setText(savedInstanceState.getString("substrate"));
+                inhabitants.setText(savedInstanceState.getString("inhabitants"));
+            }
+        }
+
+
+
         if (lstAquariums.isEmpty()) {
+            Log.d(TAG, "onCreate: lstAquarium array is empty");
             name.setText("No Aquariums Available");
             name.setVisibility(View.VISIBLE);
         }
@@ -64,6 +86,7 @@ public class AquariumsHome extends AppCompatActivity {
     }
 
     public void setAquariumData(Aquarium aquarium) {
+        Log.d(TAG, "setting data to view");
         name.setText(aquarium.getName());
         volume.setText(aquarium.getVolume());
         lighting.setText(aquarium.getLighting());
@@ -74,8 +97,28 @@ public class AquariumsHome extends AppCompatActivity {
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        Log.d(TAG, "onSaveInstanceState: saving current state and data");
+        super.onSaveInstanceState(outState);
+
+        if (content.getVisibility() == View.VISIBLE) {
+            outState.putBoolean("content_visible", true);
+
+            outState.putString("name", name.getText().toString());
+            outState.putString("volume", volume.getText().toString());
+            outState.putString("lighting", lighting.getText().toString());
+            outState.putString("filtration", filtration.getText().toString());
+            outState.putString("co2", co2.getText().toString());
+            outState.putString("substrate", substrate.getText().toString());
+            outState.putString("inhabitants", inhabitants.getText().toString());
+        }
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        Log.d(TAG, "onActivityResult: started");
 
         if (requestCode == INPUT_REQUEST) {
             if(resultCode == RESULT_OK) {

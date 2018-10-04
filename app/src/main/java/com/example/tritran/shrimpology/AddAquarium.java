@@ -3,6 +3,7 @@ package com.example.tritran.shrimpology;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -17,6 +18,7 @@ public class AddAquarium extends AppCompatActivity {
     public final static String EXTRA_CO2 = "com.example.tritran.shrimpology.CO2";
     public final static String EXTRA_SUBSTRATE = "com.example.tritran.shrimpology.SUBSTRATE";
     public final static String EXTRA_INHABITANTS = "com.example.tritran.shrimpology.INHABITANTS";
+    private final static String TAG = AddAquarium.class.getSimpleName();
 
     EditText name;
     EditText volume;
@@ -46,6 +48,8 @@ public class AddAquarium extends AppCompatActivity {
     }
 
     public void saveAquarium(View view) {
+
+        Log.d(TAG, "saveAquarium: button clicked, returning intent");
 
         Intent returnIntent = new Intent();
 //        Bundle extras = new Bundle();

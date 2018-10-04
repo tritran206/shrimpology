@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class ShrimpDetails extends AppCompatActivity {
 
-    private static final String TAG = "ShrimpDetails";
+    private static final String TAG = ShrimpDetails.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
