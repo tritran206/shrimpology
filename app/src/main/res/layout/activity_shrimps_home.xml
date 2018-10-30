@@ -9,14 +9,8 @@
     >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Species"
-        android:textSize="@dimen/title_size"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:layout_margin="@dimen/title_margin"
-        android:layout_gravity="center"/>
+        android:text="@string/species"
+        style="@style/activity_title" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,51 +18,33 @@
         android:layout_gravity="center_horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/neocaridinaLayout"
             android:onClick="openNeocaridina"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/shrimp_image_margin">
+            style="@style/category_linear_layout_style">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/neocaridina"
-                android:textSize="@dimen/label_size"
-                android:layout_gravity="center"/>
+                style="@style/category_label" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
+                style="@style/category_image"
                 android:src="@drawable/rcs"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/caridinaLayout"
             android:onClick="openCaridina"
-            android:orientation="vertical"
-            android:layout_margin="@dimen/shrimp_image_margin">
+            style="@style/category_linear_layout_style">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/caridina"
-                android:textSize="@dimen/label_size"
-                android:layout_gravity="center"/>
+                style="@style/category_label" />
 
             <ImageView
-                android:layout_width="@dimen/image_size"
-                android:layout_height="@dimen/image_size"
-                android:src="@drawable/crs"/>
+                android:src="@drawable/crs"
+                style="@style/category_image" />
 
         </LinearLayout>
-
     </LinearLayout>
-
-
-
 </LinearLayout>

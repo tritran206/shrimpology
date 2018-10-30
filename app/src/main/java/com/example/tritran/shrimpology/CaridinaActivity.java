@@ -1,5 +1,6 @@
 package com.example.tritran.shrimpology;
 
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,109 +11,40 @@ import java.util.List;
 
 public class CaridinaActivity extends AppCompatActivity {
 
-    List<Shrimp> lstShrimp;
+    List<Shrimp> mLstShrimp;
+    RecyclerView mShrimpRecyclerView;
+    RecyclerViewAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caridina);
 
-        lstShrimp = new ArrayList<>();
+        mLstShrimp = new ArrayList<>();
+        initializeData();
 
-        lstShrimp.add(new Shrimp("Pinto Boa", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintoboa));
+        mShrimpRecyclerView = findViewById(R.id.recyclerview_caridina);
+        mAdapter = new RecyclerViewAdapter(this, mLstShrimp);
 
-        lstShrimp.add(new Shrimp("Pinto Galaxy", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintogalaxy));
+        mShrimpRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mShrimpRecyclerView.setAdapter(mAdapter);
+    }
 
-        lstShrimp.add(new Shrimp("Pinto Fishbone/Skunk", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintofishbone));
+    private void initializeData() {
+        //gets data from string resource file
+        String[] caridinaName = getResources().getStringArray(R.array.caridina_names);
+        String[] caridinaParams = getResources().getStringArray(R.array.caridina_params);
+        TypedArray shrimpImageResources = getResources().obtainTypedArray(R.array.caridina_images);
 
-        lstShrimp.add(new Shrimp("Pinto Nanacy/Nanashi", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintonanacy));
+        //clear to prevent duplications
+        mLstShrimp.clear();
 
-        lstShrimp.add(new Shrimp("Pinto Zebra", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintozebra));
+        for(int i=0; i < caridinaName.length; i++){
+            mLstShrimp.add(new Shrimp(caridinaName[i],"Caridina", caridinaParams[i], shrimpImageResources.getResourceId(i, 0)));
+        }
 
-        lstShrimp.add(new Shrimp("Pinto Belly", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintobelly));
+        // cleans data
+        shrimpImageResources.recycle();
 
-        lstShrimp.add(new Shrimp("Pinto Spotted Head", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintospottedhead));
-
-        lstShrimp.add(new Shrimp("Fancy Tiger", "Caridina", "GH: 4-6, KH: 0-4\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.fancytiger));
-
-        lstShrimp.add(new Shrimp("Tangerine Tiger", "Caridina", "GH: 4-10, KH: 0\n PH: 6-7.4, " +
-                "TDS: 140-250\n Water Temp: 65-75F", R.drawable.tangerinetiger));
-
-        lstShrimp.add(new Shrimp("Orange Eye Red Ghost", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.orangeeyeredghost));
-
-        lstShrimp.add(new Shrimp("Orange Eye Red Wine", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.orangeeyeredwine));
-
-        lstShrimp.add(new Shrimp("Blue Bolt", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bluebolt));
-
-        lstShrimp.add(new Shrimp("RKK Extreme", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkkextreme));
-
-        lstShrimp.add(new Shrimp("RKK Stripe", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkkstripe));
-
-        lstShrimp.add(new Shrimp("RKK Panda", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkkpanda));
-
-        lstShrimp.add(new Shrimp("RKK No Entry", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkknoentry));
-
-        lstShrimp.add(new Shrimp("RKK Mosura", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkkmosura));
-
-        lstShrimp.add(new Shrimp("RKK Hinomaru", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.rkkhinomaru));
-
-        lstShrimp.add(new Shrimp("BKK Extreme", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkextreme));
-
-        lstShrimp.add(new Shrimp("BKK Stripe", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkstripe));
-
-        lstShrimp.add(new Shrimp("BKK Panda", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkpanda));
-
-        lstShrimp.add(new Shrimp("BKK Hinomaru", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkhinomaru));
-
-        lstShrimp.add(new Shrimp("BKK No Entry", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkknoentry));
-
-        lstShrimp.add(new Shrimp("BKK Mosura", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkmosura));
-
-        lstShrimp.add(new Shrimp("Pinto Nanacy/Nanashi", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.pintonanacy));
-
-        lstShrimp.add(new Shrimp("BKK Flowerhead", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.bkkflowerhead));
-
-        lstShrimp.add(new Shrimp("Crystal Red", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.crystalred));
-
-        lstShrimp.add(new Shrimp("Snow White", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.snowwhite));
-
-        lstShrimp.add(new Shrimp("Crystal Black", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.crystalblack));
-
-        lstShrimp.add(new Shrimp("Super Crystal Red", "Caridina", "GH: 4-6, KH: 0\n PH: 5.5-6.5, " +
-                "TDS: 100-150\n Water Temp: 65-75F", R.drawable.supercrystalred));
-
-        RecyclerView shrimpRecyclerView = findViewById(R.id.recyclerview_caridina);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, lstShrimp);
-
-        shrimpRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        shrimpRecyclerView.setAdapter(adapter);
     }
 }

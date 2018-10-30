@@ -7,4 +7,153 @@
     <string name="caridina">Caridina</string>
     <string name="neocaridina_shrimp">Neocaridina Shrimp</string>
     <string name="caridina_shrimp">Caridina Shrimp</string>
+    <string name="species">Species</string>
+    <string name="my_aquariums">My Aquariums</string>
+    <string name="name">Name</string>
+    <string name="volume">Volume</string>
+    <string name="lighting">Lighting</string>
+    <string name="filtration">Filtration</string>
+    <string name="co2">CO2</string>
+    <string name="substrate">Substrate</string>
+    <string name="inhabitants">Inhabitants</string>
+    <string name="aquarium_name">Aquarium Name</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="type_of_shrimp">Type of Shrimp</string>
+    <string name="save">Save</string>
+
+    <array name="neocaridina_images">
+        <item>@drawable/redcherry</item>
+        <item>@drawable/bluevelvet</item>
+        <item>@drawable/redrili</item>
+        <item>@drawable/bluerili</item>
+        <item>@drawable/orangerili</item>
+        <item>@drawable/snowball</item>
+        <item>@drawable/yellowback</item>
+        <item>@drawable/orangeneo</item>
+        <item>@drawable/greenjade</item>
+    </array>
+
+
+    <array name="neocaridina_params">
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+        <item>"GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " + "TDS: 150-250\n Water Temp: 69-75F"</item>
+    </array>
+
+
+    <array name="caridina_params">
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0-4\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-10, KH: 0\n PH: 6-7.4, " + "TDS: 140-250\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+        <item>"GH: 4-6, KH: 0\n PH: 5.5-6.5, " + "TDS: 100-150\n Water Temp: 65-75F"</item>
+    </array>
+
+    <array name="neocaridina_names">
+        <item>Red Cherry</item>
+        <item>Blue Velvet</item>
+        <item>Red Rili</item>
+        <item>Blue Rili</item>
+        <item>Orange Rili</item>
+        <item>Snow Ball</item>
+        <item>Yellow Back</item>
+        <item>Orange Neo</item>
+        <item>Green Jade</item>
+    </array>
+
+    <array name="caridina_names">
+        <item>"Pinto Boa"</item>
+        <item>"Pinto Galaxy</item>
+        <item>"Pinto Fishbone"</item>
+        <item>"Pinto Nanacy"</item>
+        <item>"Pinto Zebra"</item>
+        <item>"Pinto Belly"</item>
+        <item>"Pinto Spotted Head"</item>
+        <item>"Fancy Tiger"</item>
+        <item>"Tangerine Tiger"</item>
+        <item>"Orange Eye Red Ghost"</item>
+        <item>"Orange Eye Red Wine"</item>
+        <item>"Blue Bolt"</item>
+        <item>"RKK Extreme"</item>
+        <item>"RKK Stripe"</item>
+        <item>"RKK Panda"</item>
+        <item>"RKK No Entry"</item>
+        <item>"RKK Mosura"</item>
+        <item>"RKK Hinomaru"</item>
+        <item>"RKK Extreme"</item>
+        <item>"BKK Stripe"</item>
+        <item>"BKK Panda"</item>
+        <item>"BKK Hinomaru"</item>
+        <item>"BKK No Entry"</item>
+        <item>"BKK Mosura"</item>
+        <item>"BKK Flowerhead"</item>
+        <item>"Crystal Red"</item>
+        <item>"Snow White"</item>
+        <item>"Crystal Black"</item>
+        <item>"Super Crystal Red"</item>
+    </array>
+
+    <array name="caridina_images">
+        <item>@drawable/pintoboa</item>
+        <item>@drawable/pintogalaxy</item>
+        <item>@drawable/pintofishbone</item>
+        <item>@drawable/pintonanacy</item>
+        <item>@drawable/pintozebra</item>
+        <item>@drawable/pintobelly</item>
+        <item>@drawable/pintospottedhead</item>
+        <item>@drawable/fancytiger</item>
+        <item>@drawable/tangerinetiger</item>
+        <item>@drawable/orangeeyeredghost</item>
+        <item>@drawable/orangeeyeredwine</item>
+        <item>@drawable/bluebolt</item>
+        <item>@drawable/rkkextreme</item>
+        <item>@drawable/rkkstripe</item>
+        <item>@drawable/rkkpanda</item>
+        <item>@drawable/rkknoentry</item>
+        <item>@drawable/rkkmosura</item>
+        <item>@drawable/rkkhinomaru</item>
+        <item>@drawable/bkkextreme</item>
+        <item>@drawable/bkkstripe</item>
+        <item>@drawable/bkkpanda</item>
+        <item>@drawable/bkkhinomaru</item>
+        <item>@drawable/bkknoentry</item>
+        <item>@drawable/bkkmosura</item>
+        <item>@drawable/bkkflowerhead</item>
+        <item>@drawable/crystalred</item>
+        <item>@drawable/snowwhite</item>
+        <item>@drawable/crystalblack</item>
+        <item>@drawable/supercrystalred</item>
+    </array>
+
 </resources>

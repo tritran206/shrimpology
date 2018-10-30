@@ -1,5 +1,6 @@
 package com.example.tritran.shrimpology;
 
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,7 +11,9 @@ import java.util.List;
 
 public class NeocaridinaActvity extends AppCompatActivity {
 
-    List<Shrimp> lstShrimp;
+    private List<Shrimp> mLstShrimp;
+    private RecyclerViewAdapter mAdapter;
+    private RecyclerView mShrimpRecyclerView;
 
 
     @Override
@@ -18,38 +21,39 @@ public class NeocaridinaActvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_neocaridina);
 
-        lstShrimp = new ArrayList<>();
-        lstShrimp.add(new Shrimp("Red Cherry", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.redcherry));
+        //Initialize the ArrayList that will contain the data
+        mLstShrimp = new ArrayList<>();
+        initializeData();
 
-        lstShrimp.add(new Shrimp("Blue Velvet", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.bluevelvet));
+        mShrimpRecyclerView = findViewById(R.id.recyclerview_neocaridina);
+        mAdapter = new RecyclerViewAdapter(this, mLstShrimp);
 
-        lstShrimp.add(new Shrimp("Red Rili", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.redrili));
+        //Sets the look of recycler view and sets adapter to recyclerview
+        mShrimpRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        mShrimpRecyclerView.setAdapter(mAdapter);
+    }
 
-        lstShrimp.add(new Shrimp("Blue Rili", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.bluerili));
+    private void initializeData() {
 
-        lstShrimp.add(new Shrimp("Orange Rili", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.orangerili));
+        //gets data from string resource file
+        String[] neocaridinaName = getResources().getStringArray(R.array.neocaridina_names);
+        String[] neocaridinaParams = getResources().getStringArray(R.array.neocaridina_params);
+        TypedArray shrimpImageResources = getResources().obtainTypedArray(R.array.neocaridina_images);
 
-        lstShrimp.add(new Shrimp("Snowball", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.snowball));
+        //clear to prevent duplications
+        mLstShrimp.clear();
 
-        lstShrimp.add(new Shrimp("Yellow Back", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.yellowback));
+        //creates shrimp objects
+        for(int i=0;i<neocaridinaName.length;i++){
+            mLstShrimp.add(new Shrimp(neocaridinaName[i],"Neocaridina", neocaridinaParams[i], shrimpImageResources.getResourceId(i,0)));
+        }
 
-        lstShrimp.add(new Shrimp("Orange Neo", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.orangeneo));
+        // cleans data
+        shrimpImageResources.recycle();
 
-        lstShrimp.add(new Shrimp("Green Jade", "Neocaridina", "GH: 6-8, KH: 2-5\n PH: 6.5-7.8, " +
-                "TDS: 150-250\n Water Temp: 69-75F", R.drawable.greenjade));
+        //Notify the adapter of the change
+//        mAdapter.notifyDataSetChanged();
 
-        RecyclerView shrimpRecyclerView = findViewById(R.id.recyclerview_neocaridina);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, lstShrimp);
 
-        shrimpRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        shrimpRecyclerView.setAdapter(adapter);
     }
 }

@@ -7,6 +7,6 @@
     <dimen name="image_size">150dp</dimen>
     <dimen name="label_size">20sp</dimen>
     <dimen name="title_size">32sp</dimen>
-    <dimen name="title_margin">40dp</dimen>
+    <dimen name="title_margin">20dp</dimen>
     <dimen name="shrimp_species_title_margin">24dp</dimen>
 </resources>

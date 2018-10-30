@@ -9,14 +9,9 @@
     tools:context=".CaridinaActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/caridina_shrimp"
-        android:textSize="@dimen/title_size"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:layout_margin="@dimen/shrimp_species_title_margin"
-        android:layout_gravity="center"/>
+        style="@style/activity_title"
+        android:textAlignment="center"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_caridina"

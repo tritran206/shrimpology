@@ -1,21 +1,25 @@
 package com.example.tritran.shrimpology;
 
-public class Shrimp {
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Shrimp implements Serializable {
 
     private String Name;
     private String Genus;
     private String Parameters;
-    private int Thumbnail;
+    private int Picture;
 
     public Shrimp() {
 
     }
 
     public Shrimp(String name, String genus, String parameter, int thumbnail) {
-        Name = name;
-        Genus = genus;
-        Parameters = parameter;
-        Thumbnail = thumbnail;
+        this.Name = name;
+        this.Genus = genus;
+        this.Parameters = parameter;
+        this.Picture = thumbnail;
     }
 
     public String getName() {
@@ -30,8 +34,8 @@ public class Shrimp {
         return Parameters;
     }
 
-    public int getThumbnail() {
-        return Thumbnail;
+    public int getPicture() {
+        return Picture;
     }
 
     public void setName(String name) {
@@ -46,8 +50,8 @@ public class Shrimp {
         Parameters = parameters;
     }
 
-    public void setThumbnail(int thumbnail) {
-        Thumbnail = thumbnail;
+    public void setThumbnail(int Picture) {
+        this.Picture = Picture;
     }
 
 

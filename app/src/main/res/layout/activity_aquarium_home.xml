@@ -30,13 +30,8 @@
         android:layout_marginTop="55dp">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/input_margin"
-            android:gravity="center"
-            android:text="My Aquariums"/>
+            style="@style/activity_title"
+            android:text="@string/my_aquariums"/>
 
 
         <LinearLayout
@@ -53,7 +48,7 @@
                 android:textStyle="bold"
                 android:textSize="24sp"
                 android:id="@+id/tv_name"
-                android:text="Name"
+                android:text="@string/name"
                 />
 
             <LinearLayout
@@ -67,37 +62,37 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_volume"
-                    android:text="Volume"/>
+                    android:text="@string/volume"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_lighting"
-                    android:text="Lighting"/>
+                    android:text="@string/lighting"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_filtration"
-                    android:text="Filtration"/>
+                    android:text="@string/filtration"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_co2"
-                    android:text="CO2"/>
+                    android:text="@string/co2"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_substrate"
-                    android:text="Substrate"/>
+                    android:text="@string/substrate"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_inhabitants"
-                    android:text="Inhabitants"/>
+                    android:text="@string/inhabitants"/>
 
 
             </LinearLayout>

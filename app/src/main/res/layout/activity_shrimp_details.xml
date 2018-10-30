@@ -8,16 +8,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:text="Name"
         android:id="@+id/shrimp_name"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/shrimp_detail_margin"
-        android:layout_marginLeft="@dimen/shrimp_detail_margin"
-        android:layout_marginBottom="@dimen/input_margin"
-        android:layout_marginRight="@dimen/shrimp_detail_margin"/>
+        style="@style/category_label"/>
 
     <ImageView
         android:layout_width="match_parent"
